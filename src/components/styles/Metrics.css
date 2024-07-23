@@ -1,0 +1,60 @@
+.metrics-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  margin: 0 1.5rem;
+  height: 150px;
+}
+.metrics {
+  padding: 20px;
+  border: 1px solid var(--borderColor);
+  border-radius: 8px;
+  background: var(--quaternaryColor);
+  font-size: var(--normalFontSize);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.progress-metrics {
+  font-weight: 600;
+  font-size: var(--smallestFontSize);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--tertiaryColor);
+}
+
+.icon {
+  background-color: var(--backgroundColor);
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  align-items: center;
+  display: flex;
+  border-radius: 100%;
+  color: var(--primaryColor);
+  margin-left: 2rem;
+}
+
+.metrics-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.metrics:hover {
+  background: var(--whiteColor);
+  border: 1px solid var(--primaryColor);
+  transition: 1s ease;
+  h1 {
+    color: var(--primaryColor);
+  }
+  span {
+    color: var(--primaryColor);
+  }
+  .icon {
+    background: var(--primaryColor);
+    color: var(--whiteColor);
+    transition: 0.3s ease;
+  }
+}

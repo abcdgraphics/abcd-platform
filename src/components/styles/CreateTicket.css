@@ -1,0 +1,145 @@
+select {
+  height: 45px;
+  padding: 0rem 1rem;
+  border: 1px solid var(--borderColor);
+  border-radius: 8px;
+  font-size: var(--normalFontSize);
+  width: 100%;
+  background-color: var(--whiteColor);
+  color: #747474;
+}
+.ticket-id {
+  font-size: 1rem;
+  background-color: var(--backgroundColor);
+  padding: 5px 10px;
+  border-radius: 8px;
+  position: relative;
+  top: -5px;
+  left: 15px;
+  color: var(--primaryColor);
+}
+.ql-toolbar.ql-snow {
+  border-color: var(--borderColor) !important;
+  border-radius: 8px 8px 0px 0px;
+}
+.ql-container.ql-snow {
+  border-color: var(--borderColor) !important;
+  border-radius: 0px 0px 8px 8px;
+}
+.quill {
+  background-color: var(--whiteColor);
+}
+.grid-item.fields {
+  display: grid;
+  gap: 10px;
+}
+.ql-editor.ql-blank::before {
+  color: #747474;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+}
+.custom-dropdown .dropdown-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.custom-dropdown select {
+  width: 100%;
+  padding-right: 30px; /* space for the icon */
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.custom-dropdown i {
+  position: absolute;
+  top: 55%;
+  right: 10px;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #747474;
+}
+
+.custom-file-upload {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 30px;
+  box-shadow: 0 2px 4px var(--quaternaryColor);
+  padding: 0.8rem 1.75rem;
+  color: var(--whiteColor);
+  background: var(--primaryColor);
+  font-size: var(--normalFontSize);
+  height: 45px;
+  width: max-content;
+}
+
+.custom-file-upload input[type='file'] {
+  display: none;
+}
+
+.ql-toolbar.ql-snow + .ql-container.ql-snow {
+  height: 30vh !important;
+  margin-bottom: 10px;
+}
+.mainContent {
+  overflow: unset;
+}
+
+.ticketgrid-container {
+  display: grid;
+  grid-template-columns: 49.5% 49.5%;
+  gap: 1%;
+  padding: 0 1.5rem;
+  margin: 0px;
+}
+.knowledgebase {
+  padding: 20px;
+  border-radius: 8px;
+  font-size: var(--normalFontSize);
+  background: var(--quaternaryColor);
+  border: 1px solid var(--borderColor);
+  color: var(--textColor);
+}
+.ql-editor p {
+  font-size: 1rem;
+}
+
+/* Accordion Styles */
+.accordion {
+  margin-top: 20px;
+}
+
+.accordion-item {
+  border: 1px solid var(--borderColor);
+  border-radius: 8px;
+  margin-bottom: 10px;
+  background-color: var(--whiteColor);
+}
+
+.accordion-title {
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  height: 45px;
+}
+
+.accordion-title h3 {
+  margin: 0;
+}
+
+.accordion-content {
+  display: none;
+  padding: 10px;
+  border-top: 1px solid var(--borderColor);
+}
+
+.accordion-content.show {
+  display: block;
+}

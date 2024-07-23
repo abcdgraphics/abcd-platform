@@ -1,0 +1,127 @@
+.listoftasks {
+  font-family: Arial, sans-serif;
+}
+
+.listoftasks-container {
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 5.5px;
+  justify-content: space-between;
+}
+
+.task-details-taskbox {
+  display: flex;
+  justify-content: left;
+  align-content: center;
+  align-items: center;
+}
+
+.task-item {
+  display: flex;
+  align-items: center;
+  background-color: #fcfcf9;
+  padding: 0.7rem 0.8rem;
+  border-radius: 8px;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: var(--textColor);
+  font-size: var(--normalFontSize);
+  border: 1px solid var(--borderColor);
+}
+
+.task-item:hover {
+  background-color: var(--primaryColor);
+  color: var(--whiteColor);
+  transform: rotate(-3deg);
+  box-shadow: 0px 20px 20px 0px #ed7d3140;
+  border: 1px solid var(--primaryColor);
+  .task-priority {
+    color: var(--whiteColor);
+  }
+  .task-date-time {
+    color: var(--whiteColor);
+  }
+  .menuicon i {
+    background-color: var(--backgroundColor);
+    color: var(--textColor);
+  }
+  .menuicon i:hover {
+    background-color: var(--backgroundColor);
+    color: var(--primaryColor);
+  }
+}
+
+.task-completed {
+  text-decoration: line-through;
+  color: gray;
+}
+
+.task-selected {
+  background-color: #f3f3ee;
+  color: var(--textColor);
+  border: 1px solid #e5e7eb;
+  filter: blur(1px);
+  .task-date-time {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: var(--smallestFontSize);
+    letter-spacing: 1px;
+  }
+}
+
+.task-priority {
+  text-align: center;
+  border-radius: 30px;
+  color: var(--newTicketColor);
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: var(--smallestFontSize);
+  letter-spacing: 1px;
+}
+
+.task-date-time {
+  font-size: var(--smallestFontSize);
+  color: gray;
+  font-weight: 600;
+  letter-spacing: 1px;
+  i {
+    font-size: 0.45rem;
+    margin: 0 0.45rem;
+  }
+}
+
+.tasklisttabs {
+  margin-top: 1rem;
+}
+
+.action-icons {
+  display: flex;
+  gap: 10px;
+}
+
+.tabs {
+  display: flex;
+  gap: 10px;
+}
+
+.tab {
+  padding: 0.5rem 1rem;
+  background-color: var(--backgroundColor);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: var(--normalFontSize);
+}
+
+.tab.active {
+  background-color: var(--primaryColor);
+  color: var(--whiteColor);
+}
+
+.tab-content {
+  width: 100%;
+}

@@ -1,0 +1,49 @@
+/* Mobile Devices */
+@media only screen and (max-width: 767.98px) {
+  /* CSS rules for mobile devices */
+}
+
+/* Extra Small Devices (Phones, less than 576px) */
+@media only screen and (max-width: 575.98px) {
+  /* CSS rules for extra small devices (phones, less than 576px) */
+}
+
+/* Small Devices (Portrait tablets and large phones, 576px and up) */
+@media only screen and (min-width: 576px) and (max-width: 767.98px) {
+  /* CSS rules for small devices (portrait tablets and large phones, 576px and up) */
+}
+
+/* Tablets */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  /* CSS rules for tablets */
+}
+
+/* Medium Devices (Tablets, 768px and up) */
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
+  /* CSS rules for medium devices (tablets, 768px and up) */
+}
+
+/* Large Devices (Desktops, 992px and up) */
+@media only screen and (min-width: 992px) and (max-width: 1199.98px) {
+  /* CSS rules for large devices (desktops, 992px and up) */
+}
+
+/* Small Desktops and Large Tablets (1024px to 1280px) */
+@media only screen and (min-width: 1024px) and (max-width: 1280px) {
+  /* CSS rules for small desktops and large tablets */
+}
+
+/* Standard Desktops (1281px to 1600px) */
+@media only screen and (min-width: 1281px) and (max-width: 1600px) {
+  /* CSS rules for standard desktops */
+}
+
+/* Large Desktops (1601px to 1920px) */
+@media only screen and (min-width: 1601px) and (max-width: 1920px) {
+  /* CSS rules for large desktops */
+}
+
+/* Extra Large Devices (Large desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  /* CSS rules for extra large devices (large desktops, 1200px and up) */
+}

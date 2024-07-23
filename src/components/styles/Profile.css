@@ -1,0 +1,98 @@
+.profile-container {
+  .tab {
+    padding: 10px 20px;
+    cursor: pointer;
+    outline: none;
+    font-size: var(--normalFontSize);
+    background: var(--backgroundColor);
+    border-radius: 30px;
+    color: #ed7d31;
+    border-bottom: none;
+    margin-bottom: 1.5rem;
+  }
+  .tab-content {
+    padding: 0px;
+    border-radius: 0px;
+    font-size: var(--normalFontSize);
+    background: var(--quaternaryColor);
+    border: none;
+    color: var(--textColor);
+  }
+  .tab.active {
+    border-bottom: none;
+    color: var(--quaternaryColor);
+    font-size: var(--normalFontSize);
+    background: var(--primaryColor);
+    transition: 0.3s ease;
+  }
+}
+
+.profile-photo {
+  width: 90px;
+  height: 90px;
+  background-color: var(--backgroundColor);
+  color: var(--primaryColor);
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  border-radius: 100%;
+  font-size: x-large;
+}
+
+.container-div {
+  padding: 20px;
+  border: 1px solid var(--borderColor);
+  border-radius: 8px;
+}
+
+.container-div h3 {
+  padding: 5px 0px;
+}
+
+.profilesettings-photo {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.justify-spacebtw {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+}
+
+.profile-cont-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+
+.personal-info {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 20px;
+}
+
+.personal-info > div:first-child {
+  grid-column: span 1;
+}
+
+.personal-info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+}
+/* Profile.css */
+.input-field select {
+  border: none;
+  outline: none;
+  box-shadow: none;
+  width: 100%;
+  padding: 0.5em;
+  font-size: 1em;
+}

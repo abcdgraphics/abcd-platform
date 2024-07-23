@@ -1,0 +1,76 @@
+.pagename-smalltext {
+  font-size: var(--smallestFontSize);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--tertiaryColor);
+  opacity: 0.3;
+}
+.welcomemessage h3 {
+  color: var(--textColor);
+  margin: 0.5rem 0;
+}
+.topbar_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: center;
+  padding: 1.5rem;
+  border-bottom: 1px solid var(--borderColor);
+}
+.search-and-userdetails {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 3rem;
+}
+.usersettings-items {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 10px;
+  align-content: center;
+  text-align: center;
+}
+.usersettings-items i {
+  background-color: var(--quaternaryColor);
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  align-items: center;
+  display: flex;
+  border-radius: 8px;
+  color: var(--textColor);
+}
+
+.usersettings-items i:hover {
+  background-color: var(--backgroundColor);
+  color: var(--primaryColor);
+}
+
+.usersettings-items .user-photo {
+  background-color: var(--backgroundColor);
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  align-items: center;
+  display: flex;
+  border-radius: 100%;
+  color: var(--primaryColor);
+  margin-left: 2rem;
+}
+.usersettings {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.user .user-list-item {
+  justify-content: center;
+  align-items: center;
+}
+
+.usersettings-items {
+  align-items: center;
+}
+.logout{
+  cursor: pointer;
+}

@@ -1,0 +1,84 @@
+.register-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: var(--backgroundColor);
+  width: 30%;
+  text-align: center;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 20px 0px;
+}
+.form-group {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+input {
+  padding: 10px;
+  border-radius: 8px;
+  width: 100%;
+  border: 1px solid var(--borderColor);
+  outline: none;
+}
+h1 {
+  margin: 10px 0px;
+}
+.login-container p {
+  font-size: var(--normalFontSize);
+  text-align: center;
+}
+.formlink-below {
+  width: 100%;
+  margin: 10px 0px;
+}
+.formlinks {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: center;
+  font-size: var(--normalFontSize);
+  color: var(--textColor);
+}
+input:focus {
+  border: 1px solid var(--primaryColor);
+  background: var(--whiteColor);
+}
+.badge-abcd-logo {
+  cursor: pointer;
+  margin-bottom: 10px;
+  width: 64px;
+  height: 64px;
+}
+
+form .btn {
+  align-self: center;
+}
+.social-login {
+  width: 100%;
+}
+.or-divider-listitems {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.or-divider-listitem {
+  width: 33.3%;
+  text-align: center;
+}
+
+.or-divider-line {
+  font-size: var(--smallestFontSize);
+  color: var(--tertiaryColor);
+  border: 1px solid var(--borderColor);
+  padding: 8px;
+  border-radius: 100%;
+  background-color: var(--whiteColor);
+}

@@ -1,0 +1,8 @@
+.content-cont {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 35px;
+  height: 100%;
+  margin: 2rem 1.5rem;
+}

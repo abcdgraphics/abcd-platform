@@ -1,0 +1,139 @@
+.mainContent {
+  overflow: auto;
+}
+.contentContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 35px;
+}
+
+.tabs {
+  display: flex;
+}
+
+.tab {
+  padding: 10px 20px;
+  border: none;
+  border-bottom: 2px solid var(--quaternaryColor);
+  cursor: pointer;
+  outline: none;
+  font-size: var(--normalFontSize);
+  background: none;
+  border-radius: 8px 8px 0px 0px;
+  color: var(--textColor);
+}
+
+.tab.active {
+  border-bottom: 2px solid var(--primaryColor);
+  color: var(--primaryColor);
+  font-size: var(--normalFontSize);
+  background: var(--backgroundColor);
+  transition: 0.3s ease;
+}
+
+.tab-content {
+  padding: 20px;
+  border-radius: 0px 0px 8px 8px;
+  font-size: var(--normalFontSize);
+  background: var(--quaternaryColor);
+  border: 1px solid var(--borderColor);
+  color: var(--textColor);
+}
+
+.TicketSystemTabs {
+  background: var(--quaternaryColor);
+  margin: 1rem 0;
+}
+
+.MuiChip-root {
+  width: 100%;
+}
+.MuiDataGrid-root {
+  border: none !important;
+}
+.MuiChip-colorDefault {
+  background-color: var(--backgroundColor) !important;
+  color: var(--primaryColor) !important;
+}
+
+.MuiChip-filledPrimary {
+  background-color: var(--primaryColor) !important;
+}
+
+.MuiDataGrid-columnHeaderTitle {
+  color: var(--textColor);
+}
+
+.MuiDataGrid-root .MuiDataGrid-container--top [role='row'],
+.MuiDataGrid-root .MuiDataGrid-container--bottom [role='row'] {
+  background-color: var(--backgroundColor) !important;
+}
+
+.MuiDataGrid-root .MuiDataGrid-row:hover {
+  background-color: var(--whiteColor) !important;
+}
+
+.MuiDataGrid-main {
+  font-size: var(--normalFontSize) !important;
+  color: var(--textColor) !important;
+}
+
+.action-icons {
+  display: flex;
+  gap: 10px;
+  flex-direction: row;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.menuicon i:hover {
+  color: var(--primaryColor);
+  cursor: pointer;
+}
+
+.MuiDataGrid-cell {
+  align-content: center;
+  --height: 48px;
+}
+.MuiTablePagination-selectLabel {
+  color: var(--textColor) !important;
+  font-size: var(--normalFontSize) !important;
+  font-family: Outfit !important;
+}
+.MuiSelect-select {
+  color: var(--textColor) !important;
+  font-size: var(--normalFontSize) !important;
+  font-family: Outfit !important;
+}
+.MuiTablePagination-displayedRows {
+  color: var(--textColor) !important;
+  font-size: var(--normalFontSize) !important;
+  font-family: Outfit !important;
+}
+.MuiDataGrid-root .MuiDataGrid-footerContainer {
+  background-color: var(--backgroundColor) !important;
+}
+
+.item-1 {
+  background-color: var(--quaternaryColor);
+}
+
+.item-2 {
+  background-color: var(--quaternaryColor);
+  border-radius: 8px;
+}
+
+.overview-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 1.5rem;
+  align-items: center;
+}
+
+.buttons {
+  display: flex;
+  gap: 20px;
+}
