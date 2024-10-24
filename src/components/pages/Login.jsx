@@ -9,17 +9,16 @@ function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
-  const [user, setUser] = useState({});
-  const [profile, setProfile] = useState([]);
+  const [googleUser, setGoogleUser] = useState({});
 
   useEffect(() => {
-    if (user.access_token) {
+    if (googleUser.access_token) {
       axios
         .get(
-          `https://www.googleapis.com/oauth2/v1/userinfo?access_token=${user.access_token}`,
+          `https://www.googleapis.com/oauth2/v1/userinfo?access_token=${googleUser.access_token}`,
           {
             headers: {
-              Authorization: `Bearer ${user.access_token}`,
+              Authorization: `Bearer ${googleUser.access_token}`,
               Accept: "application/json",
             },
           }
@@ -47,7 +46,31 @@ function Login() {
         })
         .catch((err) => console.log(err));
     }
-  }, [user]);
+  }, [googleUser]);
+
+  useEffect(() => {
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    const codeParam = urlParams.get("code");
+
+    if (codeParam && localStorage.getItem("accessToken") === null) {
+      async function getAccessToken() {
+        await fetch("http://localhost:3002/getAccessToken?code=" + codeParam, {
+          method: "GET",
+        })
+          .then((response) => {
+            return response.json();
+          })
+          .then((data) => {
+            console.log(data);
+            if (data.access_token) {
+              localStorage.setItem("accessToken", data.access_token);
+            }
+          });
+      }
+      getAccessToken();
+    }
+  }, []);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -73,15 +96,23 @@ function Login() {
     }
   };
 
-  const login = useGoogleLogin({
-    onSuccess: (codeResponse) => setUser(codeResponse),
+  const loginWithFacebook = () => {
+    window.location.href = `https://www.facebook.com/v10.0/dialog/oauth?client_id=1566103984258098&redirect_uri=http://localhost:3000&state=12345`;
+  };
+
+  const loginWithGoogle = useGoogleLogin({
+    onSuccess: (codeResponse) => setGoogleUser(codeResponse),
     onError: (error) => console.log("Login Failed:", error),
   });
 
   const loginWithGitHub = () => {
-    const clientID = "Ov23liTFIkaoPr70w9Zx";
-    const redirectURI = "http://localhost:3002/github/callback";
-    window.location.href = `https://github.com/login/oauth/authorize?client_id=${clientID}&redirect_uri=${redirectURI}`;
+    const clientID = "Ov23lia1FIzzPuqHoJeN";
+    const redirectURI = "http://localhost:3000/login";
+    const scope = "user:email read:user";
+
+    window.location.href = `https://github.com/login/oauth/authorize?client_id=${clientID}&redirect_uri=${redirectURI}&scope=${encodeURIComponent(
+      scope
+    )}`;
   };
 
   return (
@@ -150,13 +181,13 @@ function Login() {
             <ul className={`socialicons flex`}>
               <li className={`socialiconitem`}>
                 <div>
-                  <a
-                    href="https://www.facebook.com"
+                  <div
+                    onClick={loginWithFacebook}
                     className="socialiconlink flex">
                     <i className="fi fi-brands-facebook"></i>
-                  </a>
+                  </div>
                 </div>
-                <div onClick={login} className="socialiconlink flex">
+                <div onClick={loginWithGoogle} className="socialiconlink flex">
                   <i className="fi fi-brands-linkedin"></i>
                 </div>
                 <div onClick={loginWithGitHub} className="socialiconlink flex">
@@ -167,7 +198,6 @@ function Login() {
           </div>
         </div>
       </div>
-      {/* <GoogleLogin onSuccess={responseMessage} onError={errorMessage} /> */}
     </div>
   );
 }

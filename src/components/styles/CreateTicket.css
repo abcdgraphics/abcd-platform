@@ -76,7 +76,7 @@ select {
   width: max-content;
 }
 
-.custom-file-upload input[type='file'] {
+.form-group input[type='file'] {
   display: none;
 }
 
