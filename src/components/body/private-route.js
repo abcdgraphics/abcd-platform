@@ -16,5 +16,5 @@ export default function PrivateRoute({ element: Component, ...rest }) {
     access = true;
   }
 
-  return access ? <Component {...rest} /> : <Navigate to="/login" />;
+  return !access ? <Component {...rest} /> : <Navigate to="/login" />;
 }

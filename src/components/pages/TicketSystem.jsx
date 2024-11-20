@@ -24,9 +24,9 @@ const TicketSystemTabs = () => {
       if (response.success) {
         const data = response.data;
         data.forEach((element) => {
-          element.created_on = timeAgo(element.created_on);
+          element.created_on = timeAgo(element.created_at);
         });
-        console.log(data);
+
         setAllRows(data);
       }
     }
@@ -159,6 +159,7 @@ const TicketSystemTabs = () => {
   const completedTickets = allRows.filter((row) => row.status === "Completed");
   const onHoldTickets = allRows.filter((row) => row.status === "On Hold");
 
+  console.log(allRows);
   const columns = [
     { field: "id", headerName: "ID", flex: 0, headerAlign: "center" },
     {
